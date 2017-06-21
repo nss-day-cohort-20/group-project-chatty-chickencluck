@@ -1,0 +1,3 @@
+var chattyCluck = (function(){
+	
+}(chattyCluck || {}));

@@ -1,4 +1,6 @@
+
 var chattyCluck = (function(){
+
 
 // msgInput.value
 let emptyMsg = [];
@@ -22,21 +24,16 @@ let emptyMsg = [];
 	});
 
 }(chattyCluck || {}));
-			
 
 
 
+function setMessages() {
+  //messages = JSON.parse(event.target.responseText).messages;
+}
 
-
-
-
-// notes, non functioning pieces
-			// textArea.innerHTML = *msgInput.value*
-	    	// function createMessage (message) {msgBoard.innerHTML = message;}; 
-	    	// let newMessage = "";
-	    	
-	    	// for (var i = 0; i <msgInput.value; i++) {
-		    // 	let message = `<div>${msgInput.value}</div>`;
-		    // 	newMessage += message;
-	    	// };
-	    	// createMessage(newMessage);
+function getMessages() {
+  let reqMessages = new XMLHttpRequest();
+  reqMessages.addEventListener("load", setMessages);
+  reqMessages.open("GET", "messages.json");
+  reqMessages.send();
+}

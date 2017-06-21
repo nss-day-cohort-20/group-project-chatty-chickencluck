@@ -6,12 +6,12 @@ var chattyCluck = (function(){
 
 
 function setMessages() {
-  messages = JSON.parse(event.target.responseText).messages;
+  //messages = JSON.parse(event.target.responseText).messages;
 }
 
 function getMessages() {
   let reqMessages = new XMLHttpRequest();
-  reqMessages.addEventListener("load", setMessages)
+  reqMessages.addEventListener("load", setMessages);
   reqMessages.open("GET", "messages.json");
   reqMessages.send();
 }

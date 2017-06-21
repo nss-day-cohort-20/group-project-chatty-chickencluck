@@ -3,6 +3,16 @@ body {
 	font-family: 'Droid Sans', sans-serif;
 }
 
+.logoPic {
+	border: 3px solid black;
+	border-radius: 15px;
+  width: 15%;
+  padding: 5px;
+  margin: 0 10 0 10;
+  background-color: DarkRed;
+  float: left;
+}
+
 h1 {
 
 }

@@ -19,13 +19,12 @@ h1 {
 
 }
 
-.neonDream {
-	background-color: black;
-	color: 	#7FFF00;
+.darkTheme {
+	background-color: darkgray;
 }
 
-.hulkify {
-	font-size: 4em;
+.largeText {
+	font-size: 5em;
 }
 
 .logoPic {

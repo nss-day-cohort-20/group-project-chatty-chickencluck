@@ -1,43 +1,51 @@
 console.log("Welcome to the Jungle!")
 
-// // var chattyCluck = (function(){
-	
-// // }(chattyCluck || {}));
+var chattyCluck = (function(){
+	let firstOption = document.getElementById("checkboxOne");
+	let secondOption = document.getElementById("checkboxTwo");
 
-let firstOptionOutput = document.getElementsByClassName("checkboxOne");
-let secondOptionOutput = document.getElementsByClassName("checkboxTwo");
-console.log(secondOptionOutput);
+	firstOption.addEventListener("click", darkTheme);
+	secondOption.addEventListener("click", largeText);
 
-function handleSectionClick() {
-	console.log(event)
-	let elementText = event.target.innerHTML
-	firstOptionOutput.innerHTML =  `<p class="msg">You clicked on the ${elementText} section</p>`;
-};
-
-secondOptionOutput[0].addEventListener("click", handleSectionClick);
-
-function sayYourName(name) {
-	console.log("My name is " + name );
-};
-
-let piggie = document.getElementsByClassName("checkboxOne", "checkboxTwo");
+	function darkTheme () {
+		firstOption.classList.toggle("darkTheme");
+		console.log(firstOption, firstOption.classList)
+	};
+	function largeText () {
+		secondOption.classList.toggle("largeText");
+		console.log(secondOption, secondOption.classList);
+	}	
+}(chattyCluck || {}));
 
 
-document.getElementById("checkboxOne").addEventListener("click", function() {
-	piggie.classList.toggle("neonDream");
-	console.log(piggie, piggie.classList);
-});
 
-document.getElementById("checkboxTwo").addEventListener("click", function() {
-	piggie.classList.toggle("hulkify");
-	console.log(piggie, piggie.classList)
-});
 
-// ***********************************
-// Where you click (the event) vs where the listener is attached
+// let piggie = document.getElementById("guinea-pig");
 
-document.getElementById("pig-wrapper").addEventListener("click", function() {
-	console.log("WHAT I clicked on", event.target);
-	console.log("WHERE the listener is attached", event.currentTarget);
-});
+
+// document.getElementById("add-color").addEventListener("click", function() {
+// 	piggie.classList.toggle("blue");
+// 	console.log(piggie, piggie.classList)
+// });
+
+
+// document.getElementById("make-large").addEventListener("click", function() {
+// 	piggie.classList.toggle("hulk");
+// 	console.log(piggie, piggie.classList)
+// });
+
+
+// document.getElementById("add-border").addEventListener("click", function() {
+// 	piggie.classList.toggle("borderPatrol");
+// 	console.log(piggie, piggie.classList)
+// });
+
+
+// document.getElementById("add-rounding").addEventListener("click", function() {
+// 	piggie.classList.toggle("rounding");
+// 	console.log(piggie, piggie.classList)
+// });
+
+
+
 

@@ -2,46 +2,19 @@ console.log("Welcome to the Jungle!")
 
 var chattyCluck = (function(){
 	let firstOption = document.getElementById("checkboxOne");
-	let secondOption = document.getElementById("checkboxTwo");
+	let secondOption = document.getElementById("checkboxTwo", "clearBtn");
 
 	firstOption.addEventListener("click", function () {
-		firstOption.classList.toggle("darkTheme");
-		console.log(firstOption, firstOption.classList)
+		document.body.classList.toggle("darkTheme");
+		// console.log(firstOption, firstOption.classList)
+		console.log("You just changed the color!")
 	});
 	secondOption.addEventListener("click", function () {
-		secondOption.classList.toggle("largeText");
-		console.log(secondOption, secondOption.classList);
+		document.body.classList.toggle("largeText");
+		// console.log(secondOption, secondOption.classList);
+		console.log("You just changed the size!")
 	});
 }(chattyCluck || {}));
-
-
-
-// let piggie = document.getElementById("guinea-pig");
-
-
-// document.getElementById("add-color").addEventListener("click", function() {
-// 	piggie.classList.toggle("blue");
-// 	console.log(piggie, piggie.classList)
-// });
-
-
-// document.getElementById("make-large").addEventListener("click", function() {
-// 	piggie.classList.toggle("hulk");
-// 	console.log(piggie, piggie.classList)
-// });
-
-
-// document.getElementById("add-border").addEventListener("click", function() {
-// 	piggie.classList.toggle("borderPatrol");
-// 	console.log(piggie, piggie.classList)
-// });
-
-
-// document.getElementById("add-rounding").addEventListener("click", function() {
-// 	piggie.classList.toggle("rounding");
-// 	console.log(piggie, piggie.classList)
-// });
-
 
 
 

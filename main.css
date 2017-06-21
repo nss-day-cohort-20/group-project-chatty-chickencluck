@@ -21,10 +21,11 @@ h1 {
 
 .darkTheme {
 	background-color: darkgray;
+	color: #FFFFF0;
 }
 
 .largeText {
-	font-size: 5em;
+	font-size: 2.5em;
 }
 
 .logoPic {

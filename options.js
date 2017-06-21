@@ -4,19 +4,15 @@ var chattyCluck = (function(){
 	let firstOption = document.getElementById("checkboxOne");
 	let secondOption = document.getElementById("checkboxTwo");
 
-	firstOption.addEventListener("click", darkTheme);
-	secondOption.addEventListener("click", largeText);
-
-	function darkTheme () {
+	firstOption.addEventListener("click", function () {
 		firstOption.classList.toggle("darkTheme");
 		console.log(firstOption, firstOption.classList)
-	};
-	function largeText () {
+	});
+	secondOption.addEventListener("click", function () {
 		secondOption.classList.toggle("largeText");
 		console.log(secondOption, secondOption.classList);
-	}	
+	});
 }(chattyCluck || {}));
-
 
 
 

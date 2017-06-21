@@ -3,6 +3,13 @@ body {
 	font-family: 'Droid Sans', sans-serif;
 }
 
+.navBar{
+	text-align: center;
+	position: fixed;
+	margin-top: 0;
+	width: 100%;
+}
+
 h1 {
 
 }
@@ -31,9 +38,10 @@ h1 {
 .logoPic {
 	border: 3px solid black;
 	border-radius: 15px;
-  width: 15%;
+  width: 10%;
   padding: 5px;
   margin: 0 10 0 10;
   background-color: DarkRed;
-  float: left;
+  float: center;
+  position: fixed;
 }

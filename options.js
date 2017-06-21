@@ -1,6 +1,6 @@
 var chattyCluck = (function(){
 	let firstOption = document.getElementById("checkboxOne");
-	let secondOption = document.getElementById("checkboxTwo", "clearBtn");
+	let secondOption = document.getElementById("checkboxTwo");
 
 	firstOption.addEventListener("click", function () {
 		document.body.classList.toggle("darkTheme");

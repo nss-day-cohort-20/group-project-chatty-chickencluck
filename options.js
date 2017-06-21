@@ -1,6 +1,4 @@
-console.log("Welcome to the Jungle!")
-
-var chattyCluck = (function(){
+// var chattyCluck = (function(){
 	let firstOption = document.getElementById("checkboxOne");
 	let secondOption = document.getElementById("checkboxTwo", "clearBtn");
 
@@ -14,7 +12,5 @@ var chattyCluck = (function(){
 		// console.log(secondOption, secondOption.classList);
 		console.log("You just changed the size!")
 	});
-}(chattyCluck || {}));
-
-
+// }(chattyCluck || {}));
 

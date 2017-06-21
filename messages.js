@@ -1,3 +1,10 @@
+
+var chattyCluck = (function(){
+	
+}(chattyCluck || {}));
+
+
+
 function setMessages() {
   categories = JSON.parse(event.target.responseText).messages;
   buildDOMObj();

@@ -7,7 +7,6 @@ var chattyCluck = (function(){
 
 function setMessages() {
   messages = JSON.parse(event.target.responseText).messages;
-  buildDOMObj();
 }
 
 function getMessages() {

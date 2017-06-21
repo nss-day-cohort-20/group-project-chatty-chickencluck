@@ -2,23 +2,38 @@ var chattyCluck = (function(){
 
 
 // msgInput.value
-let emptyMsg = [];
+	let emptyMsg = [];
 	    	
 	function makeArr() {
-		emptyMsg.push(`<p>${msgInput.value}<button>Delete</button></p>`)
+		emptyMsg.push(`<p>${msgInput.value}<button class="deleteMsg">Delete</button></p>`)
 	    console.log(makeMsgObj)
 	};
+
+
 
 	let makeMsgObj = Object.create(null)
 	    
 	    makeMsgObj.userMessage = emptyMsg;
-	    // makeMsgObj.arrIndex = emptyMsg.indexOf(msgInput.value);
+	    makeMsgObj.arrIndex = emptyMsg.indexOf();
+
+			// var msgObject = Object.create(null)
+		 //    msgObject.string = `<p>${msgInput.value}<button class="deleteMsg">Delete</button></p>`
+
+			// document.querySelector("body").addEventListener("click", function(event) {
+			//   console.log(event);
 
 
+
+			//   if (event.target.id === messageId) {
+			//     emptyMsg.remove(msgObject.string)
+			//   }
+			// });
 
 	function clearText() {
 		msgInput.value = "";
 	};
+
+
 
 // when enter is hit it pushes the input value into the html
 	msgInput.addEventListener("keyup", function(event) {

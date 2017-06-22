@@ -1,27 +1,31 @@
 //global var
-var chattyCluck = (function(chattyCluckObj){
-  
+var chattyCluck = (function(chattyCluckObj) {
   // msgInput.value
-  let emptyMsg = [];
+  let messageCluck = [];
         
-  chattyCluckObj.makeArr = function() {
-    emptyMsg.push(`<p id="msg-${emptyMsg.length}">${msgInput.value}<button class="deleteMsg">Delete</button></p>`)
+  function makeArr() {
+    messageCluck.push(`<p id="msg-${messageCluck.length}">${messages}, ${msgInput.value}<button class="deleteMsg">Delete</button></p>`);
   };
 
-  chattyCluckObj.clearText =function() {
+  function clearText() {
     msgInput.value = "";
-  }
+  };
+
+
+
+
+
+
+
 // when enter is hit it pushes the input value into the html
-  msgInput.addEventListener("keyup", function(event) {
+    msgInput.addEventListener("keyup", function(event) {
       event.preventDefault();
       if (event.keyCode == 13) {
-        chattyCluckObj.makeArr()
-        chattyCluckObj.clearText()
-        msgBoard.innerHTML = emptyMsg.join("");
+        makeArr()
+        clearText()
+        msgBoard.innerHTML = messageCluck.join("");
       }
   });
-
   return chattyCluckObj
-
 }(chattyCluck || {}));
 

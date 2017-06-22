@@ -1,6 +1,7 @@
 let messages = null;
 
 let newMessages = document.getElementById("msgBoard");
+
 function outputMessages(premadeMessages) {
   console.log("premadeMessages", premadeMessages);
   for(var i = 0; i < premadeMessages.length; i++) {

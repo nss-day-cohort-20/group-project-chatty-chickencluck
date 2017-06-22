@@ -1,4 +1,3 @@
-
 //global var
 var chattyCluck = (function(chattyCluckObj){
   
@@ -6,7 +5,7 @@ var chattyCluck = (function(chattyCluckObj){
   let emptyMsg = [];
         
   chattyCluckObj.makeArr = function() {
-    emptyMsg.push(`<p>${msgInput.value}</p>`)
+    emptyMsg.push(`<p id="msg-${emptyMsg.length}">${msgInput.value}<button class="deleteMsg">Delete</button></p>`)
   };
 
   chattyCluckObj.clearText =function() {
@@ -25,3 +24,4 @@ var chattyCluck = (function(chattyCluckObj){
   return chattyCluckObj
 
 }(chattyCluck || {}));
+

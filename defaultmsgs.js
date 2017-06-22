@@ -1,4 +1,3 @@
-
 var chattyCluck = function(loadJson){
   let messages = null;
 

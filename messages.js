@@ -17,7 +17,7 @@ var chattyCluck = (function(chattyCluckObj){
       if (event.keyCode == 13) {
         chattyCluckObj.makeArr()
         chattyCluckObj.clearText()
-      msgBoard.innerHTML = emptyMsg.join("");
+        msgBoard.innerHTML = emptyMsg.join("");
       }
   });
 

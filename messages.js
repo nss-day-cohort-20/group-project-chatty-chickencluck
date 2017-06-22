@@ -5,29 +5,30 @@ var chattyCluck = (function(){
 	let emptyMsg = [];
 	    	
 	function makeArr() {
-		emptyMsg.push(`<p>${msgInput.value}<button class="deleteMsg">Delete</button></p>`)
-	    console.log(makeMsgObj)
+		emptyMsg.push(`<p id="msg-${emptyMsg.length}">${msgInput.value}<button class="deleteMsg">Delete</button></p>`)
+	    // console.log(makeMsgObj)
+	    // console.log("length", emptyMsg.length);
 	};
 
+	//getElementsByClassName("delete") returns an array so we can use that to
 
-
-	let makeMsgObj = Object.create(null)
+	// let makeMsgObj = Object.create(null)
 	    
-	    makeMsgObj.userMessage = emptyMsg;
-	    makeMsgObj.arrIndex = emptyMsg.indexOf();
+	//     makeMsgObj.userMessage = emptyMsg;
+	//     makeMsgObj.arrIndex = emptyMsg.indexOf();
 
 			// var msgObject = Object.create(null)
 		 //    msgObject.string = `<p>${msgInput.value}<button class="deleteMsg">Delete</button></p>`
 
-			// document.querySelector("body").addEventListener("click", function(event) {
+			// document.querySelector("msgBoard").addEventListener("click", function(event) {
 			//   console.log(event);
-
-
-
 			//   if (event.target.id === messageId) {
 			//     emptyMsg.remove(msgObject.string)
-			//   }
-			// });
+			//   }//need to ask Joe
+			// });x
+
+
+
 
 	function clearText() {
 		msgInput.value = "";
@@ -59,3 +60,5 @@ function getMessages() {
   reqMessages.open("GET", "messages.json");
   reqMessages.send();
 }
+
+

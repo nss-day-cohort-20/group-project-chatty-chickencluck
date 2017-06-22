@@ -1,3 +1,5 @@
+var chattyCluck;
+
 // creates input space for user
 let msgInput = document.getElementById("msgInput");
 
@@ -19,14 +21,23 @@ let firstOption = document.getElementById("checkboxOne");
 // creates an object for large text 
 let secondOption = document.getElementById("checkboxTwo");
 
+// event listener for dark theme
 firstOption.addEventListener("click", function () {
 	document.body.classList.toggle("darkTheme");
-	console.log("You just changed the color!")
 	});
 	
+// event listener for large text
 secondOption.addEventListener("click", function () {
 	document.body.classList.toggle("largeText");
-	console.log("You just changed the size!")
 	});
 
+
+
 // think of a way to use the '.find' to incorporate finding properties of an object to delete
+
+
+
+
+
+
+

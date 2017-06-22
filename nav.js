@@ -1,4 +1,4 @@
-var chattyCluck = (function(){
+var chattyCluck = (function(chattyCluckObj){
 
 // let msgInput = document.getElementById("msgInput");
 // let clearBtn = document.getElementById("clearBtn");
@@ -12,5 +12,5 @@ var chattyCluck = (function(){
 
 
 
-	
+	return chattyCluckObj
 }(chattyCluck || {}));

@@ -1,3 +1,4 @@
+
 //global var
 var chattyCluck = (function(chattyCluckObj){
   
@@ -11,7 +12,6 @@ var chattyCluck = (function(chattyCluckObj){
   chattyCluckObj.clearText =function() {
     msgInput.value = "";
   }
-
 // when enter is hit it pushes the input value into the html
   msgInput.addEventListener("keyup", function(event) {
       event.preventDefault();

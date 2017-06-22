@@ -3,6 +3,7 @@ var chattyCluck = function(loadJson){
   let messages = null;
 
   let newMessages = document.getElementById("msgBoard");
+
   function outputMessages(premadeMessages) {
     console.log("premadeMessages", premadeMessages);
     for(var i = 0; i < premadeMessages.length; i++) {
@@ -18,7 +19,7 @@ var chattyCluck = function(loadJson){
 
 
 
-  loadJson.setMessages = function() {
+  function setMessages() {
     messages = JSON.parse(event.target.responseText).messages;
     console.log("messages", messages);
     outputMessages(messages)
@@ -26,7 +27,7 @@ var chattyCluck = function(loadJson){
 
 
 
-  loadJson.loadMessages = function() {
+  function loadMessages() {
     let reqMessages = new XMLHttpRequest();
     reqMessages.addEventListener("load", loadJson.setMessages);
     reqMessages.open("GET", "messages.json");
@@ -37,7 +38,7 @@ var chattyCluck = function(loadJson){
     return messages
   }
   loadJson.loadMessages();
-  
+
   return loadJson
 
 }(chattyCluck || {});

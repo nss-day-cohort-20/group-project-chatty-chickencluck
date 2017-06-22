@@ -14,11 +14,11 @@ var chattyCluck = function(loadJson){
   //   }
   // }
 
-  function setMessages() {
-    messages = JSON.parse(event.target.responseText).messages;
-    console.log("messages", messages);
-    // outputMessages(messages)
-  }
+  // function setMessages() {
+  //   messages = JSON.parse(event.target.responseText).messages;
+  //   console.log("messages", messages);
+  //   // outputMessages(messages)
+  // }
 
   function loadMessages() {
     let reqMessages = new XMLHttpRequest();
@@ -30,6 +30,11 @@ var chattyCluck = function(loadJson){
   loadJson.getMessages = function() {
     console.log(messages);
     return messages
+  }
+
+  var makeArr = {
+    console.log(makeArr);
+    return makeArr
   }
 
   loadMessages();

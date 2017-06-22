@@ -4,7 +4,7 @@ var chattyCluck = (function(chattyCluckObj) {
   let messageCluck = [];
         
   function makeArr() {
-    messageCluck.push(`<p id="msg-${messageCluck.length}">${msgInput.value}<button class="deleteMsg">Delete</button></p>`);
+    messageCluck.push(`<p id="msg-${messageCluck.length}">${messages}, ${msgInput.value}<button class="deleteMsg">Delete</button></p>`);
   };
 
   function clearText() {

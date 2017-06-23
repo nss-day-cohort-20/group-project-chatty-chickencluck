@@ -1,3 +1,6 @@
+
+
+
 var chattyCluck;
 
 // creates input space for user
@@ -34,10 +37,5 @@ secondOption.addEventListener("click", function () {
 
 
 // think of a way to use the '.find' to incorporate finding properties of an object to delete
-
-
-
-
-
-
+chattyCluck.loadMessages(chattyCluck.outputMessages)
 

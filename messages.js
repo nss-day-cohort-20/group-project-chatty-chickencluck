@@ -11,8 +11,9 @@ var chattyCluck = (function(chattyCluckObj) {
     };
 
     chattyCluckObj.formatArr = function(array) {
-        array.forEach(function(message, index) {
-            msgBoard.innerHTML += `<p id="msg[index]">${message.text}<button class="deleteMsg">Delete</button></p>`
+        array.forEach(function(message, index) {//index = [i]
+            msgBoard.innerHTML += `<p id="msg[index]" class="delete">
+                                        ${message.text}<button class="deleteMsg">Delete</button></p>`
         });
     };
 
@@ -22,15 +23,16 @@ var chattyCluck = (function(chattyCluckObj) {
         msgInput.value = "";
     };
     // when enter is hit it pushes the input value into the html
-    chattyCluckObj.makeMsgArr = function() {
-        let msgInput = document.getElementById(“msgInput”).value;
-        let msgArr = [];
-        msgArr.push(msgInput);
-        return msgArr
-    };
-
-
-
+    
+    function(){//when enter is pressed
+        let msgObj = Object.create(null);
+        msgObj.id = function(){//when enter is pressed
+            for (var i = 0; i = array.length; i++) {
+                return i
+            }
+        }
+        msgObj.text = msgInput
+    }
     return chattyCluckObj
 
 

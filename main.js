@@ -32,6 +32,7 @@ secondOption.addEventListener("click", function () {
 	});
 // think of a way to use the '.find' to incorporate finding properties of an object to delete
 chattyCluck.loadMessages(chattyCluck.formatArr);
+
 //pass in format function for arrays
 
 

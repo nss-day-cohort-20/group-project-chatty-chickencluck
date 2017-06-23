@@ -1,6 +1,5 @@
 //global var
 var chattyCluck = (function(chattyCluckObj) {
-
 //recieves array or takes new messages and returns it so we can save it somewhere.
 
 
@@ -40,6 +39,7 @@ var chattyCluck = (function(chattyCluckObj) {
     });
 
     return chattyCluckObj
+
 
 }(chattyCluck || {}));
 

@@ -1,6 +1,7 @@
 var chattyCluck = function(loadJson){
   let messages = null;
 
+
   
 
  
@@ -20,16 +21,19 @@ var chattyCluck = function(loadJson){
   loadJson.loadMessages = function(callback) {
     let reqMessages = new XMLHttpRequest();
     reqMessages.addEventListener("load", function(){loadJson.setMessages(callback)});
+
     reqMessages.open("GET", "messages.json");
     reqMessages.send();
   }
 
   loadJson.getMessages = function() {
+
     loadJson.loadMessages()
     return messages
   }
   // loadJson.getMessages();
   // loadJson.loadMessages();
+
   
   return loadJson
 

@@ -1,6 +1,3 @@
-
-
-
 var chattyCluck;
 
 // creates input space for user
@@ -16,7 +13,7 @@ let checkboxOne = document.getElementsByClassName("checkboxOne");
 let checkboxTwo = document.getElementsByClassName("checkboxTwo");
 
 // creates acces to message board
-let msgBoard = document.getElementById("msgBoard");
+
 
 // creates an object for dark theme
 let firstOption = document.getElementById("checkboxOne");
@@ -33,9 +30,19 @@ firstOption.addEventListener("click", function () {
 secondOption.addEventListener("click", function () {
 	document.body.classList.toggle("largeText");
 	});
-
-
-
 // think of a way to use the '.find' to incorporate finding properties of an object to delete
-chattyCluck.loadMessages(chattyCluck.outputMessages)
+chattyCluck.loadMessages(chattyCluck.formatArr);
+//pass in format function for arrays
 
+
+msgInput.addEventListener("keyup", function(event) {
+        event.preventDefault();
+
+        if (event.keyCode == 13) {
+            
+            let formattedMsg = chattyCluckObj.formatArr(chattyCluck.makeMsgArr)
+            chattyCluckObj.clearText()
+            msgBoard.innerHTML += formattedMsg;
+        }
+
+})

@@ -31,6 +31,16 @@ secondOption.addEventListener("click", function () {
 
 // think of a way to use the '.find' to incorporate finding properties of an object to delete
 
+msgInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+
+    if (event.keyCode == 13) {
+        let msgInput = document.getElementById("msgInput");
+        let formattedMsg = chattyCluck.formatMsg(msgInput)
+        chattyCluck.clearText()
+        msgBoard.innerHTML += formattedMsg;
+    }
+});
 
 // chattyCluck.loadMessages(chattyCluck.outputMessages)
 chattyCluck.loadMessages(chattyCluck.formatArr)

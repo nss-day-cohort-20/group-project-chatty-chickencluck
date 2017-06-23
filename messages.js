@@ -14,36 +14,13 @@ var chattyCluck = (function(chattyCluckObj) {
         }
         // when enter is hit it pushes the input value into the html
 
-      chattyCluckObj.formatArr = function(array) {
-          array.forEach(function(message, index) {
-              msgBoard.innerHTML += `<p id="msg[index]">${message.text}<button class="deleteMsg">Delete</button></p>`
-          });
-        }
+    chattyCluckObj.formatArr = function(array) {
+        array.forEach(function(message, index) {
+            msgBoard.innerHTML += `<p id="msg[index]">${message.text}<button class="deleteMsg">Delete</button></p>`
+        });
+      }
 
-    msgInput.addEventListener("keyup", function(event) {
-        event.preventDefault();
-
-        if (event.keyCode == 13) {
-            let msgInput = document.getElementById("msgInput");
-            let formattedMsg = chattyCluckObj.formatMsg(msgInput)
-            chattyCluckObj.clearText()
-            msgBoard.innerHTML += formattedMsg;
-            // emptyMsg.findIndex(values)
-
-            // function values(element) {
-            //     console.log("value", element);
-            //     console.log(emptyMsg); //doesn't work dynamically?
-
-            //     // if(index.length > -1 && emptyMsg.indexOf(element[i]) === this[i] 
-            //     // the index itself?
-            //     // not sure what goes here){
-            //     // 
-            //     //    emptyMsg.slice (index, 1);
-            //     // }
-            // }
-            // // emptyMsg.forEach(findIndex(values()))
-        }
-    });
+    
 
     return chattyCluckObj
 

@@ -24,6 +24,7 @@ let firstOption = document.getElementById("checkboxOne");
 // creates an object for large text 
 let secondOption = document.getElementById("checkboxTwo");
 
+
 // event listener for dark theme
 firstOption.addEventListener("click", function () {
 	document.body.classList.toggle("darkTheme");
@@ -37,5 +38,6 @@ secondOption.addEventListener("click", function () {
 
 
 // think of a way to use the '.find' to incorporate finding properties of an object to delete
-chattyCluck.loadMessages(chattyCluck.outputMessages)
 
+
+chattyCluck.loadMessages(chattyCluck.outputMessages)

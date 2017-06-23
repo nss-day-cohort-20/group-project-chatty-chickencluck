@@ -1,41 +1,35 @@
 var chattyCluck = function(loadJson){
   let messages = null;
 
-  let newMessages = document.getElementById("msgBoard");
-  function outputMessages(premadeMessages) {
-    console.log("premadeMessages", premadeMessages);
-    for(var i = 0; i < premadeMessages.length; i++) {
-      let msgBoard = document.createElement("article");
-      let msgText = document.createElement("p");
-      msgText.innerHTML = premadeMessages[i].text;
-      msgBoard.innerHTML = premadeMessages[i].name;
-      newMessages.appendChild(msgBoard);
-      newMessages.appendChild(msgText);
-    }
-  }
+  
+
+ 
 
 
 
-
-  loadJson.setMessages = function() {
+  loadJson.setMessages = function(callback) {
     messages = JSON.parse(event.target.responseText).messages;
     console.log("messages", messages);
-    outputMessages(messages)
+    callback(messages)
+
+
   }
 
 
 
-  loadJson.loadMessages = function() {
+  loadJson.loadMessages = function(callback) {
     let reqMessages = new XMLHttpRequest();
-    reqMessages.addEventListener("load", loadJson.setMessages);
+    reqMessages.addEventListener("load", function(){loadJson.setMessages(callback)});
     reqMessages.open("GET", "messages.json");
     reqMessages.send();
   }
 
   loadJson.getMessages = function() {
+    loadJson.loadMessages()
     return messages
   }
-  loadJson.loadMessages();
+  // loadJson.getMessages();
+  // loadJson.loadMessages();
   
   return loadJson
 

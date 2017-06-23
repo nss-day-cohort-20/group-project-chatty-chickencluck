@@ -14,7 +14,12 @@ var chattyCluck = (function(chattyCluckObj) {
         }
         // when enter is hit it pushes the input value into the html
 
-        
+      chattyCluckObj.formatArr = function(array) {
+          array.forEach(function(message, index) {
+              msgBoard.innerHTML += `<p id="msg[index]">${message.text}<button class="deleteMsg">Delete</button></p>`
+          });
+        }
+
     msgInput.addEventListener("keyup", function(event) {
         event.preventDefault();
 

@@ -1,18 +1,20 @@
 var chattyCluck = function(loadJson){
   let messages = null;
 
- loadJson.outputMessages = function(premadeMessages) {
-    console.log("premadeMessages", premadeMessages);
-    for(var i = 0; i < premadeMessages.length; i++) {
-      let newMessages = document.getElementById("msgBoard");
-      let msgBoard = document.createElement("article");
-      let msgText = document.createElement("p");
-      msgText.innerHTML = premadeMessages[i].text;
-      msgBoard.innerHTML = premadeMessages[i].name;
-      newMessages.appendChild(msgBoard);
-      newMessages.appendChild(msgText);
-    }
-  }
+ // loadJson.outputMessages = function(premadeMessages) {
+ //    console.log("premadeMessages", premadeMessages);
+ //    for(var i = 0; i < premadeMessages.length; i++) {
+ //      let newMessages = document.getElementById("msgBoard");
+ //      let msgBoard = document.createElement("article");
+ //      let msgText = document.createElement("p");
+ //      msgText.innerHTML = premadeMessages[i].text;
+ //      msgBoard.innerHTML = premadeMessages[i].name;
+ //      newMessages.appendChild(msgBoard);
+ //      newMessages.appendChild(msgText);
+ //    }
+ //  }
+
+   
 
 
   loadJson.setMessages = function(callback) {

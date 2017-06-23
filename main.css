@@ -4,6 +4,7 @@ body {
 }
 
 .navBar{
+	border: ;
 	text-align: center;
 	position: fixed;
 	top: 0;
@@ -16,14 +17,18 @@ h1 {
 #msgInput{
 
 }
+
 #clearBtn{
 
 }
+
 .checkbox{
 
 }
-.msgBoard{
 
+#msgBoard {
+	margin: 100px;
+	border: 2px solid black;
 }
 
 .darkTheme {
@@ -38,11 +43,11 @@ h1 {
 .logoPic {
 	border: 2px solid black;
 	border-radius: 15px;
-  padding: 5px;
-  margin: 0 10 0 10;
-  background-color: DarkRed;
-  float: right;
-  position: fixed;
-	right: 0;
-  width: 10%;
+	padding: 5px;
+	margin: 0 10 0 10;
+	background-color: DarkRed;
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	width: 10%;
 }

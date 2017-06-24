@@ -1,16 +1,14 @@
 var chattyCluck = (function(chattyCluckObj){
 
-// let msgInput = document.getElementById("msgInput");
-// let clearBtn = document.getElementById("clearBtn");
-// let checkboxOne = document.getElementsByClassName("checkboxOne");
-// let checkboxTwo = document.getElementsByClassName("checkboxTwo");
-	
-
-
-
-
-
-
+document.querySelector("body").addEventListener("click", function(event) {
+			let pId = document.getElementById("msg")
+		if (event.target.className === "deleteMsg") {
+			pId.parentNode.removeChild(pId)
+		}
+	})
 
 	return chattyCluckObj
+
 }(chattyCluck || {}));
+
+

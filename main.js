@@ -36,13 +36,24 @@ chattyCluck.loadMessages(chattyCluck.formatArr);
 //pass in format function for arrays
 
 
+// msgInput.addEventListener("keyup", function(event) {
+//         event.preventDefault();
+
+//         if (event.keyCode == 13) {
+            
+//             let formattedMsg = chattyCluckObj.formatArr(chattyCluck.makeMsgArr)
+//             chattyCluckObj.clearText()
+//             msgBoard.innerHTML += formattedMsg;
+//         }
+
+// })
+
 msgInput.addEventListener("keyup", function(event) {
         event.preventDefault();
 
         if (event.keyCode == 13) {
             
-            let formattedMsg = chattyCluckObj.formatArr(chattyCluck.makeMsgArr)
-            chattyCluckObj.clearText()
+            let formattedMsg = chattyCluck.formatArr(chattyCluck.makeMsgArr(chattyCluck.createMsg));
             msgBoard.innerHTML += formattedMsg;
         }
 

@@ -4,9 +4,9 @@ var chattyCluck = (function(chattyCluckObj) {
     let msgInput = document.getElementById("msgInput").value;
     let msgBoard = document.getElementById("msgBoard");
 
-    chattyCluckObj.makeMsgArr = function() {
+    chattyCluckObj.makeMsgArr = function(msgObject) {
         let msgArr = [];
-        msgArr.push(msgInput);
+        msgArr.push(msgObject);
 
     };
 
@@ -24,17 +24,20 @@ var chattyCluck = (function(chattyCluckObj) {
     };
     // when enter is hit it pushes the input value into the html
     
-    function(){//when enter is pressed
+    chattyCluckObj.createMsg = function(){//when enter is pressed
         let msgObj = Object.create(null);
         msgObj.id = function(){//when enter is pressed
-            for (var i = 0; i = array.length; i++) {
-                return i
+            for (var i = 0; i = msgArr.length; i++) {
+                return i//This will give it it's own unique id if it doesn't
+                // work maybe .mathRandom?
             }
         }
-        msgObj.text = msgInput
+        msgObj.text = msgInput.value
+        msgInput.value = "";
     }
     return chattyCluckObj
-
+//so when the delete button is pressed function must be run that looks for 
+//string that matches it's own parent's string
 
 }(chattyCluck || {}))
 

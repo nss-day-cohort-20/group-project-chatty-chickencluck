@@ -1,7 +1,7 @@
 
 
 
-var chattyCluck;
+
 
 // creates input space for user
 let msgInput = document.getElementById("msgInput");
@@ -41,6 +41,7 @@ msgInput.addEventListener("keyup", function(event) {
         msgBoard.innerHTML += formattedMsg;
     }
 });
+
 
 // chattyCluck.loadMessages(chattyCluck.outputMessages)
 chattyCluck.loadMessages(chattyCluck.formatArr)

@@ -1,29 +1,19 @@
 {
 	"messages": [
 		{
-			"id": 0,
-			"name": "motherCluck",
-			"text": "This chatroom is pretty cool"
+			"text": "motherCluck - This chatroom is pretty cool"
 		},
 		{
-			"id": 1,
-			"name": "lil' clucker",
-			"text": "Just type your message in the box at the top, and when you hit return it will show up as a new message at the bottom!"
+			"text": "lil' clucker - Just type your message in the box at the top, and when you hit return it will show up as a new message at the bottom!"
 		},
 		{
-			"id": 2,
-			"name": "Cluck boy",
-			"text": "To remove your message, click the delete button next to your message"
+			"text": "Cluck boy - To remove your message, click the delete button next to your message"
 		},
 		{
-			"id": 3,
-			"name": "Cluck Daddy",
-			"text": "If you want to clear all messages, click the 'clear messages' button next to the text box"
+			"text": "Cluck Daddy - If you want to clear all messages, click the 'clear messages' button next to the text box"
 		},
 		{
-			"id": 4,
-			"name": "cluckMe",
-			"text": "Try it out and enjoy uClucker!"
+			"text": "babyDontCluckMe - Try it out and enjoy uClucker!"
 		}
 	]
 	
